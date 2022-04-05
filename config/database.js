@@ -9,5 +9,5 @@ mongoose.connect('mongodb://localhost/flights', {
 const db = mongoose.connection;
 
 db.on('connected', function(){
-    console.log(`Connectd to MongoDB as at ${db.host}:${db.port}`);
+    console.log(`Connectd to MongoDB at ${db.host}:${db.port}`);
 });

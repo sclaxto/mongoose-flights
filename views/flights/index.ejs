@@ -1,23 +1,24 @@
 <%- include('../partials/header') %>
-<table id="list">
+<h1>Flight List </h1>
+<table id="FlightList">
     <thead>
       <tr>
         <th>Airline</th>
         <th>Airport</th>
-        <th>FlightNo</th>
+        <th>Flight-Number</th>
         <th>Departs</th>
       </tr>
     </thead>
    <tbody>
-   <% flights.forEach(function(m) => { %>
+   <% flights.forEach(function(f) { %>
     <tr>
-        <td><%= m.company %></td>
-        <td><%= m.state %></td>
-        <td><%= m.number %></td>
-        <td><%= m.date %></td>
-        <td><a href="/flights/<%= m._id %>">DETAILS</a></td>
+        <td><%= f.airline %></td>
+        <td><%= f.airport %></td>
+        <td><%= f.flightNumber %></td>
+        <td><%= f.departs %></td>
+        <td><button><a href="/flights/<%= f._id %>">DETAILS</a></button></td>
     </tr>
    <% }); %>
    </tbody>
    </table>
-   <% include('../partials/footer') %> 
+   <%- include('../partials/footer') %> 
